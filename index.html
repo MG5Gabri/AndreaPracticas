@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Divertido</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        #message {
+            display: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6347;
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button onclick="mostrarMensaje()">Haz clic para el mensaje</button>
+        <div id="message">NOS DEBES UN GANSITO WUJUUUUU</div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            let mensaje = document.getElementById('message');
+            mensaje.style.display = 'block';
+            setTimeout(function() {
+                mensaje.style.opacity = 1;
+                mensaje.style.transform = 'scale(1)';
+            }, 10);
+        }
+    </script>
+
+</body>
+</html>
+
